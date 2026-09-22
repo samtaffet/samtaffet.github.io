@@ -74,6 +74,13 @@
         opacity: 0.7;
         margin: 20px 0;
       }
+      .button-group {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
     </style>
   </head>
   <body id="ist3" class="gjs-t-body">
@@ -89,6 +96,7 @@
             <a id="ipzfn" href="/" title="" class="navbar-menu-link">Home</a>
             <a id="i9adf" title="" href="/photo" class="navbar-menu-link"><div id="i731b"><div id="ij74f">Photography</div></div></a>
             <a id="itr9j" href="/booking" class="navbar-menu-link"><div id="iy0g5"><div id="in24c">Booking</div></div></a>
+            <!-- Blog Link in Navigation Bar -->
             <a id="iblog-nav" href="/blog" class="navbar-menu-link"><div><div>Blog</div></div></a>
           </nav>
         </div>
@@ -101,15 +109,17 @@
 
     <div id="itsm" class="card">
       <h1 id="ip9qh" class="gjs-t-h1 title">Blog</h1>
-      <h2 id="i2qyw" class="gjs-t-h2 subtitle">Wordpress Blog</h2>
+      <h2 id="i2qyw" class="gjs-t-h2 subtitle">WordPress Blog</h2>
       
       <!-- Container where WordPress posts load -->
       <div id="posts-container" class="blog-feed">
         <div id="loading-state">Loading posts...</div>
       </div>
 
-      <div style="margin-top: 30px;">
-        <a href="/" class="gjs-t-button button" style="text-decoration: none;">Back to Home</a>
+      <!-- Action Buttons Container -->
+      <div class="button-group">
+        <a href="/blog" class="gjs-t-button button" style="text-decoration: none;">Visit Full Blog Page</a>
+        <a href="/" class="gjs-t-button button" style="text-decoration: none; opacity: 0.8;">Back to Home</a>
       </div>
 
       <div id="io76h" class="footer">
@@ -131,7 +141,6 @@
 
     <!-- WordPress Fetch Script -->
     <script>
-      // Replace with your actual WordPress site URL (e.g. 'https://blog.yourdomain.com' or 'https://yourdomain.com')
       const WP_URL = 'https://YOUR-WORDPRESS-SITE-URL.com';
 
       async function fetchPosts() {
