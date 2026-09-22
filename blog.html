@@ -153,7 +153,6 @@
     <script>
         const WP_SITE = 'samtaffet.wordpress.com';
 
-        // Fallback endpoint list (WordPress.com Public API v1.1 vs Core WP v2 REST API)
         const ENDPOINTS = [
             `https://public-api.wordpress.com/rest/v1.1/sites/${WP_SITE}/posts/?number=10`,
             `https://${WP_SITE}/wp-json/wp/v2/posts?per_page=10&_embed`
@@ -168,7 +167,7 @@
                     const res = await fetch(url);
                     if (res.ok) {
                         const data = await res.json();
-                        postsData = data.posts || data; // Handles WP.com API object vs Core WP array format
+                        postsData = data.posts || data;
                         break;
                     }
                 } catch (e) {
@@ -194,15 +193,15 @@
                 const excerpt = post.excerpt?.rendered || post.excerpt || '';
 
                 return `
-                <article class="post-card">
-                  <h3 class="post-title">
-                    <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
-                  </h3>
-                  <div class="post-date">${date}</div>
-                  <div class="post-excerpt">${excerpt}</div>
-                  <a class="read-more" href="${link}" target="_blank" rel="noopener noreferrer">Read more &rarr;</a>
-                </article>
-              `;
+                    <article class="post-card">
+                      <h3 class="post-title">
+                        <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
+                      </h3>
+                      <div class="post-date">${date}</div>
+                      <div class="post-excerpt">${excerpt}</div>
+                      <a class="read-more" href="${link}" target="_blank" rel="noopener noreferrer">Read more &rarr;</a>
+                    </article>
+                  `;
             }).join('');
         }
 
