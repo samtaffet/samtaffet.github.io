@@ -19,42 +19,6 @@
     <link rel="icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Force container reset */
-        div.links-wrapper {
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            align-items: center !important;
-            gap: 10px !important;
-            margin: 25px 0 !important;
-            width: 100% !important;
-        }
-
-        /* Override GrapesJS button block styles completely */
-        div.links-wrapper a.btn-link {
-            display: inline-block !important;
-            width: auto !important;
-            min-width: 0 !important;
-            max-width: none !important;
-            height: auto !important;
-            padding: 8px 18px !important;
-            margin: 0 !important;
-            background-color: #ba6097 !important; /* Matches pink button background */
-            color: #ffffff !important;
-            border-radius: 6px !important;
-            text-decoration: none !important;
-            font-size: 0.9rem !important;
-            font-weight: 500 !important;
-            text-align: center !important;
-            box-sizing: border-box !important;
-            line-height: 1.4 !important;
-        }
-
-        div.links-wrapper a.btn-link:hover {
-            opacity: 0.9;
-        }
-
         .bio-text {
             text-align: left;
             line-height: 1.6;
@@ -70,6 +34,10 @@
         .bio-text p:last-child {
             margin-bottom: 0;
         }
+
+        .custom-btn:hover {
+            opacity: 0.88;
+        }
     </style>
 </head>
 <body id="ist3" class="gjs-t-body">
@@ -84,7 +52,6 @@
                 <nav id="i5iu3" class="navbar-menu">
                     <a id="ipzfn" href="/" title="" class="navbar-menu-link">Home</a>
                     <a id="i9adf" title="" href="/photo" class="navbar-menu-link"><div id="i731b"><div id="ij74f">Photography</div></div></a>
-                    <a id="itr9j" href="/booking" class="navbar-menu-link"><div id="iy0g5"><div id="in24c">Booking</div></div></a>
                     <a id="iblog-nav" href="/blog" class="navbar-menu-link"><div><div>Blog</div></div></a>
                 </nav>
             </div>
@@ -108,12 +75,12 @@
             </p>
         </div>
 
-        <!-- Custom Row Container completely bypasses GrapesJS classes -->
-        <div class="links-wrapper">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-link">LinkedIn</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="btn-link">Instagram</a>
-            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-link">Resume</a>
-            <a href="/blog" class="btn-link">Blog</a>
+        <!-- Inline flex container with strict inline button styles -->
+        <div style="display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; align-items: center !important; gap: 10px !important; margin: 25px 0 !important; width: 100% !important;">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="custom-btn" style="display: inline-block !important; width: auto !important; height: auto !important; padding: 8px 16px !important; margin: 0 !important; background-color: #ba6097 !important; color: #ffffff !important; border-radius: 6px !important; text-decoration: none !important; font-size: 0.88rem !important; font-weight: 500 !important; text-align: center !important; box-sizing: border-box !important;">LinkedIn</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="custom-btn" style="display: inline-block !important; width: auto !important; height: auto !important; padding: 8px 16px !important; margin: 0 !important; background-color: #ba6097 !important; color: #ffffff !important; border-radius: 6px !important; text-decoration: none !important; font-size: 0.88rem !important; font-weight: 500 !important; text-align: center !important; box-sizing: border-box !important;">Instagram</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="custom-btn" style="display: inline-block !important; width: auto !important; height: auto !important; padding: 8px 16px !important; margin: 0 !important; background-color: #ba6097 !important; color: #ffffff !important; border-radius: 6px !important; text-decoration: none !important; font-size: 0.88rem !important; font-weight: 500 !important; text-align: center !important; box-sizing: border-box !important;">Resume</a>
+            <a href="/blog" class="custom-btn" style="display: inline-block !important; width: auto !important; height: auto !important; padding: 8px 16px !important; margin: 0 !important; background-color: #ba6097 !important; color: #ffffff !important; border-radius: 6px !important; text-decoration: none !important; font-size: 0.88rem !important; font-weight: 500 !important; text-align: center !important; box-sizing: border-box !important;">Blog</a>
         </div>
 
         <div id="io76h" class="footer">
