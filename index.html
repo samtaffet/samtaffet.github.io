@@ -20,21 +20,31 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .custom-button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            flex-direction: row !important;
+            gap: 10px !important;
+            justify-content: center !important;
+            align-items: center !important;
             margin-top: 25px;
             margin-bottom: 25px;
+            width: 100%;
         }
 
-        .custom-button-group .gjs-t-button {
-            padding: 10px 20px;
-            font-size: 0.95rem;
+        .custom-button-group .gjs-t-button,
+        .custom-button-group .button {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: auto !important;
+            min-width: 110px;
+            max-width: fit-content !important;
+            padding: 8px 16px !important;
+            font-size: 0.88rem !important;
             border-radius: 6px;
             text-decoration: none;
-            display: inline-block;
             box-sizing: border-box;
+            text-align: center;
         }
 
         .bio-text {
@@ -42,7 +52,15 @@
             line-height: 1.6;
             margin-bottom: 25px;
             font-size: 0.95rem;
-            opacity: 0.9;
+            opacity: 0.95;
+        }
+
+        .bio-text p {
+            margin-bottom: 14px;
+        }
+
+        .bio-text p:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -74,15 +92,15 @@
         <h2 id="i2qyw" class="gjs-t-h2 subtitle">About Me</h2>
 
         <div class="bio-text">
-            <p style="margin-bottom: 15px;">
-                I am a senior studying Public Relations and Advertising at DePaul with double minors in Music Business and Event Planning, originally from North Carolina and now based in Chicago. My work centers around DIY music, physical media, and live shows.
+            <p>
+                I am a senior studying Public Relations and Advertising at DePaul with double minors in Music Business and Event Planning.
             </p>
             <p>
-                I run <a href="https://blackdicerecords.com" target="_blank" rel="noopener noreferrer" style="color: inherit; font-weight: bold; text-decoration: underline;">Black Dice Records</a>, an independent record label out of Chicago focused on physical music releases, band merchandise, and putting on DIY shows and concert promotion. At Radio DePaul, I serve as both Promotion Director and Live Music Director, booking and engineering live studio sets while handling station promotion and press coverage opportunities.
+                I run <a href="https://blackdicerecords.com" target="_blank" rel="noopener noreferrer" style="color: inherit; font-weight: bold; text-decoration: underline;">Black Dice Records</a>, an independent record label out of Chicago focused on physical music releases.
             </p>
         </div>
 
-        <!-- Compact Navigation / Action Buttons -->
+        <!-- Inline Compact Buttons -->
         <div class="custom-button-group">
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="gjs-t-button button">LinkedIn</a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="gjs-t-button button">Instagram</a>
