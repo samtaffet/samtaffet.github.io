@@ -19,32 +19,40 @@
     <link rel="icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="style.css">
     <style>
-        .custom-button-group {
+        /* Force container reset */
+        div.links-wrapper {
             display: flex !important;
-            flex-wrap: wrap !important;
             flex-direction: row !important;
-            gap: 10px !important;
+            flex-wrap: wrap !important;
             justify-content: center !important;
             align-items: center !important;
-            margin-top: 25px;
-            margin-bottom: 25px;
-            width: 100%;
+            gap: 10px !important;
+            margin: 25px 0 !important;
+            width: 100% !important;
         }
 
-        .custom-button-group .gjs-t-button,
-        .custom-button-group .button {
-            display: inline-flex !important;
-            align-items: center !important;
-            justify-content: center !important;
+        /* Override GrapesJS button block styles completely */
+        div.links-wrapper a.btn-link {
+            display: inline-block !important;
             width: auto !important;
-            min-width: 110px;
-            max-width: fit-content !important;
-            padding: 8px 16px !important;
-            font-size: 0.88rem !important;
-            border-radius: 6px;
-            text-decoration: none;
-            box-sizing: border-box;
-            text-align: center;
+            min-width: 0 !important;
+            max-width: none !important;
+            height: auto !important;
+            padding: 8px 18px !important;
+            margin: 0 !important;
+            background-color: #ba6097 !important; /* Matches pink button background */
+            color: #ffffff !important;
+            border-radius: 6px !important;
+            text-decoration: none !important;
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
+            line-height: 1.4 !important;
+        }
+
+        div.links-wrapper a.btn-link:hover {
+            opacity: 0.9;
         }
 
         .bio-text {
@@ -100,12 +108,12 @@
             </p>
         </div>
 
-        <!-- Inline Compact Buttons -->
-        <div class="custom-button-group">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="gjs-t-button button">LinkedIn</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="gjs-t-button button">Instagram</a>
-            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="gjs-t-button button">Resume</a>
-            <a href="/blog" class="gjs-t-button button">Blog</a>
+        <!-- Custom Row Container completely bypasses GrapesJS classes -->
+        <div class="links-wrapper">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-link">LinkedIn</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="btn-link">Instagram</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-link">Resume</a>
+            <a href="/blog" class="btn-link">Blog</a>
         </div>
 
         <div id="io76h" class="footer">
